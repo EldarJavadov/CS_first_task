@@ -1,46 +1,73 @@
 ﻿using System;
 
-internal class Program
+class Program
 {
     private static void Main(string[] args)
     {
-        int number1;
-        int number2;
-        string symbol;
+
+        #region
+
+        //int end = 10;
+        //int count = 0;
+
+        //for (int number = 2; number <= end; number++)
+        //{
+        //    bool isPrime = true;
+
+        //    for (int divisor = 2; divisor*divisor <= number; divisor++)
+        //    {
+        //        if (number % divisor == 0)
+        //        {
+        //            isPrime = false;
+        //            break;
+        //        }
+        //    }
+
+        //    if (isPrime)
+        //    {
+        //        count++;
+        //    }
+        //}
+
+        //Console.WriteLine(count);
+
+        #endregion
 
 
-        Console.WriteLine("Ilk reqemi daxil edin");
-        number1 = int.Parse(Console.ReadLine());
+        #region
+        //int number = 1230;
+        //int count = 0;
 
-        Console.WriteLine("Simvolu daxil edin(-+/*)");
-        symbol = Console.ReadLine();
+        //while (number != 0)
+        //{
+        //    number = number/10;
+        //    count++;
+        //}
+        //Console.WriteLine(count);
+        #endregion
 
-        Console.WriteLine("ikinci reqemi daxil edin");
-        number2 = int.Parse(Console.ReadLine());
 
+        #region
+        int number = 9;
+        int number1 = 0;
 
-        switch (symbol)
+        do
         {
-            case "+":
-            Console.WriteLine($"Berbardir={number1+number2}");
-            break;
+            if (number1 == number)
+            {
+                Console.WriteLine("3ün qüvvətidir");
+                break;
+            }
+            else
+            {
+                number1 = number / 3;
+                //Console.WriteLine("3ün qüvvəti deyil");
+            }
+        } while (number1 * number1 <= number);
 
-            case "-":
-            Console.WriteLine($"Berbardir={number1 - number2}");
-            break;
-            
-            case "*":
-            Console.WriteLine($"Berbardir={number1 *number2}");
-            break;
 
-            case "/":
-            Console.WriteLine($"Berbardir={number1 /number2}");
-            break;
-
-            default:
-            Console.WriteLine("Dogru simvol daxil edilmeyib");
-            break;
-        }
+        
+        #endregion
 
     }
 }
